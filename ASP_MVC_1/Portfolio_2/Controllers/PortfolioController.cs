@@ -1,29 +1,29 @@
 using Microsoft.AspNetCore.Mvc;
-namespace Portfolio_1.Controllers     //be sure to use your own project's namespace!
+namespace Portfolio_2.Controllers     //be sure to use your own project's namespace!
 {
 	public class PortfolioController : Controller   //remember inheritance??
 	{
 		//for each route this controller is to handle:
 		[HttpGet] //type of request
 		[Route("")] //associated route string (exclude the leading /)
-		public string Index()
+		public ViewResult Index()
 		{
-			return "This is my Index!";
+			return View();
 		}
 
 		[HttpGet]
 		[Route("projects")]
-		public string Projects()
+		public ViewResult Projects()
 		{
-			return "These are my projects!";
+			return View();
 		}
 
-		
+	
 		[HttpGet]
 		[Route("contact")]
-		public string Contact()
+		public ViewResult Contact()
 		{
-			return "This is my Contact!";
+			return View();
 		}
 	}
 }
