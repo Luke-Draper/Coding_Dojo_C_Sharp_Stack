@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<title>Razor Fun</title>
+	</head>
+	<body>
+		@{
+			var StringList = new List<string>
+			{
+				"apple",
+				"banana",
+				"cherry",
+				"durango"
+			};
+		}
+		@foreach(var word in StringList)
+		{
+			<p style="@(word.StartsWith('c') ? "color:red" : "")"
+			>@word</p>
+		}
+	</body>
+</html>
