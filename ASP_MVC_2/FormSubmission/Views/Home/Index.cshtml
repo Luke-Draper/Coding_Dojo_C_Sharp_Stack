@@ -1,0 +1,36 @@
+@model Registration
+<div class="row p-4 justify-content-center">
+	<h1>Dojo Registration Form</h1>
+</div>
+<div class="row justify-content-center">
+	<form class="col-sm-6 bg-secondary p-4 rounded" action="/create" method="post">
+		<div class="form-row p-2 justify-content-center">
+			<span asp-validation-for="FirstName"></span>
+			<label class="col-sm-4 col-form-label" asp-for="FirstName"></label>
+			<input class="col-sm-8 form-control" asp-for="FirstName">
+		</div>
+		<div class="form-row p-2 justify-content-center">
+			<span asp-validation-for="LastName"></span>
+			<label class="col-sm-4 col-form-label" asp-for="LastName"></label>
+			<input class="col-sm-8 form-control" asp-for="LastName">
+		</div>
+		<div class="form-row p-2 justify-content-center">
+			<span asp-validation-for="Age"></span>
+			<label class="col-sm-4 col-form-label" asp-for="Age"></label>
+			<input class="col-sm-8 form-control" asp-for="Age">
+		</div>
+		<div class="form-row p-2 justify-content-center">
+			<span asp-validation-for="EmailAddress"></span>
+			<label class="col-sm-4 col-form-label" asp-for="EmailAddress"></label>
+			<input class="col-sm-8 form-control" asp-for="EmailAddress">
+		</div>
+		<div class="form-row p-2 justify-content-center">
+			<span asp-validation-for="Password"></span>
+			<label class="col-sm-4 col-form-label" asp-for="Password"></label>
+			<input class="col-sm-8 form-control" asp-for="Password">
+		</div>
+		<div class="form-row justify-content-end">
+			<input class="col-auto p-2 mr-3 btn btn-dark" type="submit" value="Submit">
+		</div>
+	</form>
+</div>
