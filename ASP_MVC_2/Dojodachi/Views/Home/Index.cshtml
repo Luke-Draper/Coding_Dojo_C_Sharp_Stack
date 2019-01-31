@@ -1,0 +1,59 @@
+﻿<div class="row justify-content-center">
+	<div class="col-sm-6 bg-secondary p-4 rounded">
+		<div class="row justify-content-around">
+			<span class="col-auto bg-dark rounded p-2">
+				Fullness : @ViewBag.Dachi.Fullness
+			</span>
+			<span class="col-auto bg-dark rounded p-2">
+				Happiness : @ViewBag.Dachi.Happiness
+			</span>
+			<span class="col-auto bg-dark rounded p-2">
+				Meals : @ViewBag.Dachi.Meals
+			</span>
+			<span class="col-auto bg-dark rounded p-2">
+				Energy : @ViewBag.Dachi.Energy
+			</span>
+		</div>
+	</div>
+</div>
+<div class="row justify-content-center mt-4">
+	<div class="col-sm-6 bg-secondary p-4 rounded">
+		<h1>Dojodachi</h1>
+		@if(ViewBag.Messages.Count>0){
+			foreach(string message in ViewBag.Messages)
+			{
+				<p>@message</p>
+			}
+		}
+	</div>
+</div>
+@if(ViewBag.Reset){
+<div class="row justify-content-center mt-4">
+	<div class="col-sm-6 bg-secondary p-4 rounded">
+		<div class="row justify-content-around">
+			<form class="col-auto" action="/reset" method="post">
+				<input class="btn btn-dark p-2" type="submit" value="Play Again?">
+			</form>
+		</div>
+	</div>
+</div>
+}else{
+<div class="row justify-content-center mt-4">
+	<div class="col-sm-6 bg-secondary p-4 rounded">
+		<div class="row justify-content-around">
+			<form class="col-auto" action="/feed" method="post">
+				<input class="btn btn-dark p-2" type="submit" value="Feed">
+			</form>
+			<form class="col-auto" action="/play" method="post">
+				<input class="btn btn-dark p-2" type="submit" value="Play">
+			</form>
+			<form class="col-auto" action="/work" method="post">
+				<input class="btn btn-dark p-2" type="submit" value="Work">
+			</form>
+			<form class="col-auto" action="/sleep" method="post">
+				<input class="btn btn-dark p-2" type="submit" value="Sleep">
+			</form>
+		</div>
+	</div>
+</div>
+}
