@@ -1,0 +1,17 @@
+﻿<div class="row justify-content-center mt-4">
+	<table class="table-dark col-6">
+		<tr class="p-2">
+			<th class="p-2">Name</th>
+			<th class="p-2">Length</th> 
+			<th class="p-2">Elevation Change</th>
+		</tr>
+		@foreach (Trail trail in ViewBag.TrailList)
+		{
+		<tr class="p-2">
+			<td class="p-2"><a href="/trail/@trail.trail_id">@trail.name</a></td>
+			<td class="p-2">@trail.length</td> 
+			<td class="p-2">@trail.elevation</td>
+		</tr>
+		}
+	</table>
+</div>
